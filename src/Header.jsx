@@ -2,16 +2,14 @@ import React from "react";
 
 export default function Header({ onCartClick, onJoinUsClick, onaboutclick }) {
     const handleAddToCart = () => {
-        
         onCartClick();
-        
         window.alert("Product added to cart successfully!");
     };
 
     return (
         <div className="header">
             <div className="site-name">
-                <img src="../images/siteLogo.jpg" alt="site-logo" />
+                <img src="./images/siteLogo.jpg" alt="site-logo" />
                 <h1>VIThub</h1>
             </div>
             <div className="search">
@@ -36,7 +34,7 @@ export default function Header({ onCartClick, onJoinUsClick, onaboutclick }) {
                 </button>
                 {/* Call handleAddToCart when the "Add to Cart" button is clicked */}
                 <button className="shopping-cart" onClick={handleAddToCart}>
-                    <img src="../images/shoppingCart.jpg" alt="shopping-cart" />
+                    <img src="./images/shoppingCart.jpg" alt="shopping-cart" />
                 </button>
             </div>
         </div>
