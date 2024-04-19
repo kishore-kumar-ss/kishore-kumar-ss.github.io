@@ -1,4 +1,6 @@
 import React from "react";
+import siteLogoImage from '../images/siteLogo.jpg';
+import shoppingCartImage from '../images/shoppingCart.jpg';
 
 export default function Header({ onCartClick, onJoinUsClick, onaboutclick }) {
     const handleAddToCart = () => {
@@ -9,7 +11,7 @@ export default function Header({ onCartClick, onJoinUsClick, onaboutclick }) {
     return (
         <div className="header">
             <div className="site-name">
-                <img src="./images/siteLogo.jpg" alt="site-logo" />
+                <img src={siteLogoImage} alt="site-logo" />
                 <h1>VIThub</h1>
             </div>
             <div className="search">
@@ -32,9 +34,8 @@ export default function Header({ onCartClick, onJoinUsClick, onaboutclick }) {
                 <button className="join-us" onClick={onaboutclick}>
                     <p> about us</p>
                 </button>
-                {/* Call handleAddToCart when the "Add to Cart" button is clicked */}
                 <button className="shopping-cart" onClick={handleAddToCart}>
-                    <img src="./images/shoppingCart.jpg" alt="shopping-cart" />
+                    <img src={shoppingCartImage} alt="shopping-cart" />
                 </button>
             </div>
         </div>
